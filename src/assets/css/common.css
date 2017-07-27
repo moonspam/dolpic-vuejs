@@ -39,7 +39,8 @@ body{background:url(../img/bg.png) #EDEFF4;color:#282828}
 .gbox{width:135px;height:145px;overflow:hidden;float:left;background-size:cover;margin:0 8px 8px 0;border:2px solid #FFFFFF;box-shadow:0 0 4px rgba(0,0,0,.2);cursor:pointer;-webkit-transition:all .3s ease-in-out;-moz-transition:all .3s ease-in-out;-o-transition:all .3s ease-in-out;-ms-transition:all .3s ease-in-out}
 .transition{-webkit-transform:scale(1.04);-moz-transform:scale(1.04);-o-transform:scale(1.04);transform:scale(1.04)}
 .gbox:hover{border:2px solid #282828}
-.gbox_thumb{width:115px;height:40px;padding:105px 10px 0;color:#EDEFF4;text-shadow:1px 1px #000000;display:none}
+.gbox_thumb{display:none;width:115px;height:40px;padding:105px 10px 0;color:#EDEFF4;text-shadow:1px 1px #000000}
+.gbox:hover .gbox_thumb{display:block}
 .gbox_t_title{font-size:12px;font-weight:bold}
 .gbox_t_text{font-size:11px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal}
 .gbox_t_text img{vertical-align:middle;padding-bottom:2px;margin-left:-2px}
