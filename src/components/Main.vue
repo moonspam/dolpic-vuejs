@@ -20,6 +20,16 @@
         <strong onClick="alert($(this).text());">{{randomPost[0].hashTagId.twitterHashTag}}</strong>
         <span class="tbox">더 보기</span>
       </div>
+      <div v-for='value in randomPost' :key="value._id">
+        <div class='gbox' v-bind:style="{ backgroundImage: 'url(' + value.url + ')' }">
+          <div class='gbox_thumb' :class="[{g_t_twitter: value.urlType === 1}, {g_t_instagram: value.urlType === 2}, {g_t_facebook: value.urlType === 3}]">
+            <div class='gbox_t_title'>{{value.hashTagId.twitterHashTag}}</div>
+            <div class='gbox_t_text'>
+              <img src='../assets/img/icon_like.png' height='9' alt='like'>{{value.likeCount}}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class='clear'></div>
     <!-- 구글 광고 -->
@@ -39,7 +49,7 @@ export default {
   },
   created () {
     this.listNew()
-    for (var i = 0; i < 5; i++) {
+    for (let i = 0; i < 5; i++) {
       this.randomList(i)
     }
   },
