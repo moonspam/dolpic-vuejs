@@ -15,6 +15,13 @@
       </div>
     </div>
     <div class='clear'></div>
+    <div v-for='randomPost in randomPosts' :key='randomPost[0]._id'>
+      <div class="dp_title">
+        <strong onClick="alert($(this).text());">{{randomPost[0].hashTagId.twitterHashTag}}</strong>
+        <span class="tbox">더 보기</span>
+      </div>
+    </div>
+    <div class='clear'></div>
     <!-- 구글 광고 -->
     <img src='../assets/img/sample_ad2.jpg' width='728' height='90'>
   </div>
@@ -26,11 +33,15 @@ export default {
   data () {
     return {
       active: false,
-      posts: []
+      posts: [],
+      randomPosts: []
     }
   },
   created () {
     this.listNew()
+    for (var i = 0; i < 5; i++) {
+      this.randomList(i)
+    }
   },
   methods: {
     listNew () {
@@ -38,6 +49,13 @@ export default {
       this.$http.post(apiURL).then((result) => {
         console.log(result)
         this.posts = result.data
+      })
+    },
+    randomList (i) {
+      const apiURL = 'http://dolpic.kr/api/list'
+      this.$http.post(apiURL).then((result) => {
+        console.log(result)
+        this.randomPosts[i] = result.data
       })
     }
   }

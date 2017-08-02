@@ -73,6 +73,12 @@ body{background:url(../img/bg.png) #EDEFF4;color:#282828}
 .hot_box li span{position:absolute;display:block;width:auto;height:16px;line-height:16px;padding:10px 0;top:0;right:10px}
 .hot_box li a{color:#EDEFF4}
 .hot_box li a:hover{text-decoration:underline}
+.hot_box li:not(:first-child){padding-left:32px;width:256px;background-repeat:no-repeat;background-position:10px center}
+.hot_box li:nth-child(2){background-image:url(../img/num_1.png)}
+.hot_box li:nth-child(3){background-image:url(../img/num_2.png)}
+.hot_box li:nth-child(4){background-image:url(../img/num_3.png)}
+.hot_box li:nth-child(5){background-image:url(../img/num_4.png)}
+.hot_box li:nth-child(6){background-image:url(../img/num_5.png)}
 
 /* 로그인 */
 .login_box{width:300px;height:200px;margin:40px auto 0;padding-top:80px;background:url(../img/logo_text.png) no-repeat center top}
