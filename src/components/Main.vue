@@ -47,11 +47,13 @@ export default {
       randomPosts: []
     }
   },
-  created () {
-    this.listNew()
+  mounted () {
     for (let i = 0; i < 5; i++) {
       this.randomList(i)
     }
+  },
+  created () {
+    this.listNew()
   },
   methods: {
     listNew () {
